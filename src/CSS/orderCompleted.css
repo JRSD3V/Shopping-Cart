@@ -1,0 +1,38 @@
+.ordered-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ordered-item-thumbnail, .ordered-item-info {
+    margin-right: 15px;
+}
+
+.ordered-item-thumbnail img {
+    width: 75px;
+    border-radius: 10px;
+}
+
+.ordered-left {
+    display: flex;
+    align-items: center;
+}
+
+.ordered-item-info-title {
+    margin-bottom: 5px;
+}
+
+.ordered-item-single-amount {
+    margin-right: 10px;
+    font-weight: bold;
+    color: var(--red);
+}
+
+@media (max-width: 350px) {
+    .ordered-item-info-title {
+        max-width: 10ch;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}

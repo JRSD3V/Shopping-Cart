@@ -1,0 +1,91 @@
+@import url(./variables.css);
+
+.item-thumbnail {
+    position: relative;
+}
+
+.item-thumbnail img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.item-thumbnail button {
+    position: absolute;
+    display: flex;
+    width: 150px;
+    height: 40px;
+    border-radius: 50px;
+    align-items: center;
+    justify-content: center;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(50%);
+    border: 1px solid #ccc;
+    background-color: var(--white);
+    font-family: inherit;
+}
+
+.item-thumbnail button:hover {
+    cursor: pointer;
+    border-color: var(--red);
+}
+
+.quantity-btn {
+    display: flex;
+    background-color: var(--red) !important;
+    border-color: var(--red) !important;
+    justify-content: space-around !important;
+    width: 150px;
+    height: 40px;
+    align-items: center;
+    border-radius: 50px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(50%);
+    position: absolute;
+    color: var(--white);
+}
+
+.quantity-btn .minus, .quantity-btn .plus {
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 1px solid var(--white);
+    cursor: pointer;
+}
+
+.item-thumbnail button img {
+    width: 20px;
+    margin-right: 10px;
+}
+
+.item-info {
+    margin-top: 30px;
+}
+
+.item-category {
+    color: var(--rose-500);
+    font-size: 14px;
+}
+
+.item-name {
+    color: var(--rose-900);
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.item-name:hover {
+    background-size: 100% 1px, 100% 1px, 100% 1px;
+}
+
+.item-price {
+    color: var(--red);
+    font-weight: bold;
+}
+
+.item-price::before {
+    content: "$";
+}

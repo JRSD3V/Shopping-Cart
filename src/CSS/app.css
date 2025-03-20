@@ -1,0 +1,212 @@
+@import url('./variables.css');
+
+section {
+    width: 95%;
+    margin: 50px auto;
+    max-width: 1600px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.title, .title-cart {
+    color: var(--rose-900);
+    font-family: 'Red Hat Bold', sans-serif;
+}
+
+.title {
+    margin: 1.5rem 0;
+}
+
+.title {
+    color: var(--rose-900);
+    font-size: 30px;
+}
+
+.title-cart {
+    font-size: 20px;
+}
+
+.items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.cart {
+    background-color: var(--white);
+    max-width: 500px;
+    padding: 1.5rem;
+    border-radius: 10px;
+}
+
+.left, .right {
+    flex: 1;
+}
+
+.cart-items {
+    margin: 1rem 0 2rem;
+}
+
+.carbon {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.carbon img {
+    margin-right: 10px;
+}
+
+.cart-total-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    align-items: center;
+    color: var(--rose-900);
+}
+
+.confirm-order, .startNewOrder {
+    width: 100%;
+    height: 45px;
+    border-radius: 50px;
+    border: 1px solid var(--red);
+    background-color: var(--red);
+    color: var(--white);
+    font-weight: bold;
+    font-family: inherit;
+    letter-spacing: 0.5px;
+}
+
+.confirm-order:hover, .startNewOrder:hover {
+    cursor: pointer;
+    background-color: var(--red-900);
+    border-color: var(--red-900);
+}
+
+.totalPrice {
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.confirmed-wrapper {
+    position: absolute;
+    background-color: var(--white);
+    border-radius: 15px;
+    width: 100%;
+    max-width: 650px;
+    padding: 2rem;
+}
+
+.confirmed-text {
+    margin: 1rem 0 2rem;
+}
+
+.confirmed-text h2, .confirmed-order-total h2 {
+    color: var(--rose-900);
+    font-size: 2.5rem;
+    font-family: 'Red Hat Bold', sans-serif;
+
+}
+
+.confirmed-text p {
+    margin-top: 10px;
+}
+
+.confirmed-order-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.confirmed-order-total h2 {
+    font-size: 2rem;
+}
+
+.startNewOrder {
+    margin-top: 2rem;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 5;
+}
+
+.confirmed-wrapper {
+    z-index: 5;
+    display: none;
+}
+
+.show {
+    display: block !important;
+}
+
+.cart-mobile {
+    width: 100px;
+    height: 45px;
+    border-radius: 50px;
+    border: 1px solid var(--red);
+    background-color: var(--white);
+    color: var(--red);
+    font-weight: bold;
+    font-family: inherit;
+    letter-spacing: 0.5px;
+    margin-right: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+@media (max-width: 910px) {
+    .right {
+        position: absolute;
+        background-color: var(--red);
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 75px;
+        display: flex;
+        align-items: center;
+        justify-content: right;
+    }
+
+    .cart {
+        position: fixed;
+        height: 100vh;
+        top: 0;
+        right: 0;
+        z-index: 10;
+        background-color: white; 
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        transform: translateX(100%);
+        transition: 0.2s ease;
+    }
+
+    .cart-active {
+        transform: translateX(0) !important;
+    }
+
+    .cart-items {
+        height: 350px;
+        overflow-y: scroll;
+    }
+
+    .left {
+        margin-top: 50px;
+    }
+
+    .cart-mobile {
+        display: block;
+    }
+
+    .confirmed-wrapper {
+        position: fixed;
+        bottom: 0;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+}
